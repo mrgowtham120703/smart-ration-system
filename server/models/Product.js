@@ -9,7 +9,7 @@ const productSchema = new mongoose.Schema({
     name: { type: String, required: true },
     pricePerKg: { type: Number, required: true },
     availbleQtyKg: { type: Number, default: 0 },
-    allocation: [allocateSchema],  // How product is allocated
+    allocations: [allocateSchema],  // How product is allocated
     active: { type: Boolean, default: true }
 });
 
