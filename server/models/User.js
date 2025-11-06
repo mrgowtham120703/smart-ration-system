@@ -11,7 +11,7 @@ const userSchema = new mongoose.Schema({
 
     // Salesman fields
     shopNumber: { type: String },
-    passwordJash: String,
+    passwordHash: String,
 
 });
 
