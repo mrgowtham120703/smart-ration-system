@@ -46,7 +46,7 @@ app.get("/", (req, res) => {
 
 app.use("/api/products", productRoutes);
 app.use("/api/orders", orderRoutes);
-app.use("/api/users", userRoutes);
+app.use("/api/auth", userRoutes);
 
 // Start server
 

@@ -32,5 +32,5 @@ exports.salesmanLogin = async (req, res) => {
         if (!ok) return res.status(401).json({ msg: 'Invalid' })
     }
     const token = jwt.sign({ id: user._id, type: 'salesman', shopNumber: user.shopNumber }, JWT_SECRET, { expiresIn: '7d' });
-    res.json({ token, user: { name: user.name, sopNumber: user.shopNumber } });
+    res.json({ token, user: { name: user.name, shopNumber: user.shopNumber } });
 }
