@@ -3,6 +3,10 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const mongoose = require('mongoose');
 
+const productRoutes = require("./routes/products");
+const orderRoutes = require("./routes/orders");
+const userRoutes = require("./routes/auth")
+
 // server.js (top)
 const path = require('path');
 require('dotenv').config({ path: path.resolve(__dirname, '.env') }); // ensure correct .env path
@@ -31,6 +35,18 @@ if (!mongoUri) {
   console.error('FATAL: MONGO_URI is not defined. Check your .env file and variable name.');
   process.exit(1); // stop server so you don't run without DB
 }
+
+// Basic route
+
+app.get("/", (req, res) => {
+  res.send("Smart Ration System Backend Running");
+});
+
+// API Routes
+
+app.use("/api/products", productRoutes);
+app.use("/api/orders", orderRoutes);
+app.use("/api/users", userRoutes);
 
 // Start server
 

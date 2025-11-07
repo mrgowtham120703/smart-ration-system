@@ -54,4 +54,4 @@ router.get('/:cardNumber', async (req, res) => {
     }
 });
 
-export default router; 
+module.exports = router; 
