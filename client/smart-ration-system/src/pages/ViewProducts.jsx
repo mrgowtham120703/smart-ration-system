@@ -12,7 +12,7 @@ const ViewProducts = () => {
   ];
 
   return (
-    <div className="min-h-screen felx flex-col items-center bg-gray-50 py-10">
+    <div className="min-h-screen flex flex-col items-center bg-gray-50 py-10">
       <h2 className="text-2xl font-semibold mb-6">Product Available</h2>
       <div className="grid grid-cols-1 gap-4 w-80">
         {products.map((p, i) => (
