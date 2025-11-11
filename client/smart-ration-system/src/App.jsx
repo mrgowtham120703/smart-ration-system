@@ -7,6 +7,7 @@ import ConsumerHome from './pages/ConsumerHome';
 import ViewProducts from './pages/ViewProducts';
 import SelectProducts from './pages/SelectProducts';
 import CartPage from './pages/CartPage';
+import PaymentPage from './pages/PaymentPage';
 
 const App = () => (
   <div>
@@ -18,6 +19,7 @@ const App = () => (
       <Route path='/view-products' element={<ViewProducts />} />
       <Route path='/select-products' element={<SelectProducts />} />
       <Route path='/cart' element={<CartPage />} />
+      <Route path='/payment' element={<PaymentPage />} />
     </Routes>
   </div>
 )
