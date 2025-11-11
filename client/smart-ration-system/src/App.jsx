@@ -8,6 +8,7 @@ import ViewProducts from './pages/ViewProducts';
 import SelectProducts from './pages/SelectProducts';
 import CartPage from './pages/CartPage';
 import PaymentPage from './pages/PaymentPage';
+import AcknowledgementPage from './pages/AcknowledgementPage';
 
 const App = () => (
   <div>
@@ -20,6 +21,7 @@ const App = () => (
       <Route path='/select-products' element={<SelectProducts />} />
       <Route path='/cart' element={<CartPage />} />
       <Route path='/payment' element={<PaymentPage />} />
+      <Route path='/acknowledgement' element={<AcknowledgementPage />} />
     </Routes>
   </div>
 )
