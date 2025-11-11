@@ -14,14 +14,14 @@ const SelectProducts = () => {
     const [selected, setSelected] = useState([]);
 
     const handleCheck = (item) => {
-        if (setSelected.find((x) => x.name === item.name))
-            setSelected(setSelected.filter((x) => x.name !== item.name));
-        else setSelected([...setSelected, { ...item, quantity: 1 }]);
+        if (selected.find((x) => x.name === item.name))
+            setSelected(selected.filter((x) => x.name !== item.name));
+        else setSelected([...selected, { ...item, quantity: 1 }]);
     };
 
     const updateQty = (item, qty) => {
         setSelected(
-            setSelected.map((x) =>
+            selected.map((x) =>
                 x.name === item.name ? { ...x, quantity: Number(qty) } : x)
         )
     };
