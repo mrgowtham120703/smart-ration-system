@@ -9,6 +9,7 @@ import SelectProducts from './pages/SelectProducts';
 import CartPage from './pages/CartPage';
 import PaymentPage from './pages/PaymentPage';
 import AcknowledgementPage from './pages/AcknowledgementPage';
+import SalesmanDashboard from './pages/SalesmanDashboard';
 
 const App = () => (
   <div>
@@ -22,6 +23,7 @@ const App = () => (
       <Route path='/cart' element={<CartPage />} />
       <Route path='/payment' element={<PaymentPage />} />
       <Route path='/acknowledgement' element={<AcknowledgementPage />} />
+      <Route path='/dashboard' element={<SalesmanDashboard />} />
     </Routes>
   </div>
 )

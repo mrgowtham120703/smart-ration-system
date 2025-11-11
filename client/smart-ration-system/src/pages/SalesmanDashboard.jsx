@@ -1,9 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 
 const SalesmanDashboard = () => {
-  return (
-    <div>SalesmanDashboard</div>
-  )
-}
+  const [orders, setOrders] = useState([]);
 
-export default SalesmanDashboard
+  useEffect(() => {
+    const mockOrders = [
+      { id: 1, name: 'Ration Card #1234', items: 'Rice 5kg, sugar 2kg', status: 'Pending' },
+      { id: 1, name: 'Ration Card #5678', items: 'Oil 1L', status: 'Completed' }
+    ];
+    setOrders(mockOrders);
+  }, []);
+
+  return (
+    <div className='min-h-screen bg-gray-50 flex flex-col items-center py-10'>
+      <h2 className='text-2xl font-semibold mb-6'>Salesman Dashboard</h2>
+      <div className='w-96 space-y-3'>
+        {orders.map((o) => (
+          <div
+            key={o.id} className='bg-white shadow p-4 rounded-xl flex justify-between'>
+            <div>
+              <p className='font-semibold'>{o.name}</p>
+              <p className='text-sm text-gray-500'>{o.items}</p>
+            </div>
+            <span
+              className={`${o.status === 'completed' ? 'text-green-600' : 'text-yellow-600'} font-medium`}
+            >
+              {o.status}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+};
+
+export default SalesmanDashboard;
