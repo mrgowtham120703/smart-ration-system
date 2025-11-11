@@ -10,6 +10,7 @@ import CartPage from './pages/CartPage';
 import PaymentPage from './pages/PaymentPage';
 import AcknowledgementPage from './pages/AcknowledgementPage';
 import SalesmanDashboard from './pages/SalesmanDashboard';
+import NotFound from './pages/NotFound';
 
 const App = () => (
   <div>
@@ -24,6 +25,7 @@ const App = () => (
       <Route path='/payment' element={<PaymentPage />} />
       <Route path='/acknowledgement' element={<AcknowledgementPage />} />
       <Route path='/dashboard' element={<SalesmanDashboard />} />
+      <Route path='*' element={<NotFound />} />
     </Routes>
   </div>
 )
