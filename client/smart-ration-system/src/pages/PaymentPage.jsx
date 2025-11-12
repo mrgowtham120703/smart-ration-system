@@ -7,15 +7,16 @@ const PaymentPage = () => {
   const navigate = useNavigate();
 
   const handlePayment = () => {
-    if (method === 'offline') {
+    if (method === "offline") {
       const id = Date.now();
-      localStorage.setItem('ackId', id);
+      localStorage.setItem("ackId", id);
       alert(`Offline payment selected. Acknowledgement ID: ${id}`);
       navigate('/acknowledgement');
-    } else if (method === 'online' && password.trim() !== '') {
+    } else if (method === "online" && password.trim() !== "") {
       const id = Date.now();
-      localStorage.setItem('ackId', id);
+      localStorage.setItem("ackId", id);
       alert('Payment Successfull');
+      navigate("/acknowledgement")
     } else {
       alert('Please choose method and enter password if online');
     }
@@ -26,18 +27,22 @@ const PaymentPage = () => {
       <div className="bg-white shadow-lg rounded-2xl p-8 w-80">
         <h2 className="text-xl font-semibold mb-4 text-center">Make Payment</h2>
         <select
+          id="paymentMethod"
+          name="paymentMethod"
           onChange={(e) => setMethod(e.target.value)}
           className="border rounded-md w-full p-2 mb-4"
         >
           <option value=''>Select Payment Method</option>
-          <option value=''>Pay Online</option>
-          <option value=''> Pay Offline</option>
+          <option value='online'>Pay Online</option>
+          <option value='offline'> Pay Offline</option>
         </select>
 
         {method === 'online' && (
           <input
             type="password"
             placeholder="Enter Password"
+            id="paymentPassword"
+            name="payementPassword"
             className="border rounded-md px-3 py-2 w-full mb-4"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
