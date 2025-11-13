@@ -51,7 +51,10 @@ const SelectProducts = () => {
                                 type="checkbox"
                                 checked={!!selected.find((x) => x.name === item.name)}
                                 onChange={() => handleCheck(item)}
-                            />{" "}
+                            />
+                            {" "}
+                            {item.image}
+                            {" "}
                             {item.name}
                         </label>
                         <input
