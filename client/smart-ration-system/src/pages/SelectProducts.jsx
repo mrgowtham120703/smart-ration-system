@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom";
 const SelectProducts = () => {
     const navigate = useNavigate();
     const items = [
-        { name: 'Rice', price: 0 },
-        { name: 'Sugar', price: 20 },
-        { name: 'Oil', price: 100 },
-        { name: 'Dhal', price: 35 },
-        { name: 'Wheat', price: 0 },
+        { name: 'Rice', price: 0, image: <i className="fa-solid fa-bowl-rice"></i> },
+        { name: 'Sugar', price: 20, image: <i className="fa-solid fa-cubes-stacked"></i>  },
+        { name: 'Oil', price: 100, image: <i className="fa-solid fa-oil-can"></i> },
+        { name: 'Dhal', price: 35, image: <i className="fa-solid fa-bowl-food"></i> },
+        { name: 'Wheat', price: 0, image: <i className="fa-solid fa-wheat-awn"></i> },
     ];
 
     const [selected, setSelected] = useState([]);
@@ -27,12 +27,21 @@ const SelectProducts = () => {
     };
 
     const proceed = () => {
-        localStorage.setItem('cart', JSON.stringify(selected));
+
+        // ensure we store only the needed fields
+
+        const safeSelected = selected.map(item => ({
+           id: item._id || item.id,
+           name: item.name,
+           price: item.price,
+           quantity: item.quantity,
+  }));
+        localStorage.setItem('cart', JSON.stringify(safeSelected));
         navigate('/cart');
     }
 
     return (
-        <div className="min-h-screen flex flex-col items-center bg-gray-50 py-8">
+        <div className="min-h-screen flex flex-col items-center bg-emerald-200 py-8">
             <h2 className="text-2xl font-semibold mb-6">Selected Products</h2>
             <div className="w-80 space-y-4">
                 {items.map((item, i) => (
