@@ -11,8 +11,8 @@ const AcknowledgementPage = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white rounded-2xl shadow-md p-8 w-80 text-center">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-emerald-200">
+      <div className="bg-gray-100 border-4 border-gray-500 rounded-2xl shadow-md p-8 w-80 text-center">
         <h2 className="text-2xl font-semibold mb-4">Acknowledgement</h2>
         <p className="text-2xl font-semibold mb-4">Your Payment / Order is Confirmed</p>
         <p className="font-bold text-blue-700">ID: {ackId}</p>

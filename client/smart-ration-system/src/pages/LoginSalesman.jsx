@@ -16,9 +16,9 @@ const LoginSalesman = () => {
     };
 
     return (
-        <div className="flex items-center justify-center min-h-screen">
-            <div className="bg-white shadow-lg rounded-2xl p-8 w-80">
-                <h2 className="text=xl font-semibold mb-4 text-center">Salesman</h2>
+        <div className="bg-emerald-200 flex items-center justify-center min-h-screen">
+            <div className="bg-gray-200 border-4 border-gray-500 shadow-lg rounded-2xl p-8 w-80">
+                <h2 className="text-xl font-semibold mb-4 text-center"><i className="fa-solid fa-user-tie"></i> Salesman</h2>
                 <input
                     type="text"
                     placeholder="Shop Number"
@@ -29,13 +29,13 @@ const LoginSalesman = () => {
                 <input
                     type="password"
                     placeholder="Password"
-                    className="border rounded-md py-3 w-full mb-4"
+                    className="border rounded-md px-3 py-2 w-full mb-3"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                 />
                 <button
                     onClick={handleLogin}
-                    className="bg-green-600 text-white w-fill py-3 rounded-md hover:bg-green-700"
+                    className="bg-green-600 text-white w-full py-2 rounded-md hover:bg-green-700"
                 >Login
                 </button>
             </div>

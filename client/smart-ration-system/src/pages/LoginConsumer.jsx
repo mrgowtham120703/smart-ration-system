@@ -16,9 +16,9 @@ const LoginConsumer = () => {
    };
 
   return (
-    <div className='flex flex-col items-center justify-center min-h-screen'>
-      <div className='bg-white shadow-lg rounded-2xl p-8 w-80'>
-        <h2 className='text-xl font-semibold mb-4 text-center'>Consumer Login</h2>
+    <div className='flex flex-col items-center justify-center min-h-screen bg-emerald-200'>
+      <div className='bg-gray-200 border-4 border-gray-500 shadow-lg rounded-2xl p-8 w-100 h-55'>
+        <h2 className='text-xl font-semibold mb-4 text-center'><i class="fa-solid fa-user"></i> Consumer Login</h2>
         <input
         type='text'
         value={cardNumber}

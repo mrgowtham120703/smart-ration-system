@@ -23,8 +23,8 @@ const PaymentPage = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-      <div className="bg-white shadow-lg rounded-2xl p-8 w-80">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-emerald-200">
+      <div className="bg-gray-100 shadow-lg rounded-2xl p-8 w-100">
         <h2 className="text-xl font-semibold mb-4 text-center">Make Payment</h2>
         <select
           id="paymentMethod"
@@ -33,7 +33,7 @@ const PaymentPage = () => {
           className="border rounded-md w-full p-2 mb-4"
         >
           <option value=''>Select Payment Method</option>
-          <option value='online'>Pay Online</option>
+          <option value='online'> Pay Online</option>
           <option value='offline'> Pay Offline</option>
         </select>
 
